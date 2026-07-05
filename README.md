@@ -32,9 +32,6 @@
 
 ---
 
-## 📸 Screenshots
-
-To showcase the high-fidelity user interface, place screenshots in a `docs/assets/` folder and link them below:
 
 | AI Dashboard | Study Planner Agent |
 | :---: | :---: |
