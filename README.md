@@ -33,13 +33,7 @@
 ---
 
 
-| AI Dashboard | Study Planner Agent |
-| :---: | :---: |
-| ![AI Dashboard Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/dashboard.png) | ![Study Planner Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/planner.png) |
 
-| Tutor Agent | Focus Sanctuary |
-| :---: | :---: |
-| ![Tutor Agent Socratic Chat Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/tutor.png) | ![Focus Sanctuary Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/focus.png) |
 
 ---
 
@@ -47,16 +41,7 @@
 
 The repository includes a GitHub Actions CI/CD workflow defined in `.github/workflows/deploy.yml` which deploys the static application directly to **GitHub Pages** on every push to the `main` branch.
 
-### Git Flow & Deployment Diagram:
-```mermaid
-graph TD
-    Developer[Developer Push to Main] -->|Push Code| Github[GitHub Repository]
-    Github -->|Triggers| GA[GitHub Actions Runner]
-    GA -->|Step 1: Checkout| Checkout[checkout@v4]
-    Checkout -->|Step 2: Setup Pages| Setup[configure-pages@v4]
-    Setup -->|Step 3: Upload Artifacts| Upload[upload-pages-artifact@v3]
-    Upload -->|Step 4: Deploy| Deploy[deploy-pages@v4]
-    Deploy -->|Published Link| LiveSite[Live GitHub Pages Site]
+
 ```
 
 ---
