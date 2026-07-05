@@ -1,16 +1,17 @@
 # EduMentor AI: A Multi-Agent Personalized Learning Assistant
 
-EduMentor AI is a state-of-the-art, high-fidelity multi-agent tutoring platform designed to deliver personalized, Socratic-guided education. Built entirely as a premium Single Page Application (SPA), it provides an immersive, interactive study workspace to maximize long-term concept comprehension.
+EduMentor AI is a state-of-the-art, high-fidelity multi-agent tutoring platform designed to deliver personalized, Socratic-guided education. Built entirely as a premium Single Page Application (SPA) using HTML, CSS, and Vanilla JavaScript, it provides an immersive, interactive study workspace to maximize long-term concept comprehension.
 
 ---
 
 ## 🌟 Key Features
 
 ### 1. Specialized Multi-Agent Framework
-- **Curriculum Planner Agent:** Analyzes the target subject, learner proficiency (Beginner, Intermediate, Advanced), and learning style (Practical, Theoretical, Visual) to compile structured modules and lesson pathways.
-- **Socratic Mentor Agent:** An embedded chat tutor that guides understanding through leading questions, prompts, and thought validation. It strictly avoids feeding direct solutions.
-- **Assessment & Feedback Agent:** Sets interactive multiple-choice tests per lesson and provides analytical, conceptual breakdown evaluations of the options.
-- **Progress Tracker Agent:** Tracks masteries, streak calendars, study metrics, and unlocks gamified achievements.
+- **Study Planner Agent (Curriculum Planner):** Analyzes the target subject, learner proficiency (Beginner, Intermediate, Advanced), and learning style (Practical, Theoretical, Visual) to compile structured modules and lesson pathways.
+- **Tutor Agent (Socratic Mentor):** An embedded chat tutor that guides understanding through leading questions, prompts, and thought validation. It strictly avoids feeding direct solutions.
+- **Quiz Agent (Assessment & Feedback):** Sets interactive multiple-choice tests per lesson and provides analytical, conceptual breakdown evaluations of the options.
+- **Progress Agent (Progress Tracker):** Tracks masteries, streak calendars, study metrics, and unlocks gamified achievements.
+- **Resource Agent:** Automatically fetches recommended additional references, articles, and video resources matching the active lesson context.
 
 ### 2. Gamified Quests & XP Leveling
 - Earn XP for active lessons, Socratic chats, completed quizzes, and focus sessions.
@@ -28,6 +29,38 @@ EduMentor AI is a state-of-the-art, high-fidelity multi-agent tutoring platform 
 
 ### 5. Text-To-Speech (TTS) Reader
 - Listen to Socratic responses and summaries using natural Speech Synthesis options, facilitating auditory learners.
+
+---
+
+## 📸 Screenshots
+
+To showcase the high-fidelity user interface, place screenshots in a `docs/assets/` folder and link them below:
+
+| AI Dashboard | Study Planner Agent |
+| :---: | :---: |
+| ![AI Dashboard Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/dashboard.png) | ![Study Planner Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/planner.png) |
+
+| Tutor Agent | Focus Sanctuary |
+| :---: | :---: |
+| ![Tutor Agent Socratic Chat Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/tutor.png) | ![Focus Sanctuary Placeholder](https://raw.githubusercontent.com/sharanyabyali/capstone/main/docs/assets/focus.png) |
+
+---
+
+## ⚙️ CI/CD Deployment Workflow
+
+The repository includes a GitHub Actions CI/CD workflow defined in `.github/workflows/deploy.yml` which deploys the static application directly to **GitHub Pages** on every push to the `main` branch.
+
+### Git Flow & Deployment Diagram:
+```mermaid
+graph TD
+    Developer[Developer Push to Main] -->|Push Code| Github[GitHub Repository]
+    Github -->|Triggers| GA[GitHub Actions Runner]
+    GA -->|Step 1: Checkout| Checkout[checkout@v4]
+    Checkout -->|Step 2: Setup Pages| Setup[configure-pages@v4]
+    Setup -->|Step 3: Upload Artifacts| Upload[upload-pages-artifact@v3]
+    Upload -->|Step 4: Deploy| Deploy[deploy-pages@v4]
+    Deploy -->|Published Link| LiveSite[Live GitHub Pages Site]
+```
 
 ---
 
